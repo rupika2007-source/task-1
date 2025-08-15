@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixelwave - Your Vision, Launched.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111827;
+            color: white;
+            margin: 0;
+        }
+
+        /* Navbar */
+        header {
+            background-color: #111827;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ec4899;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ec4899;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://mir-s3-cdn-cf.behance.net/projects/404/2b653a182921783.Y3JvcCwzMjQwLDI1MzQsMCww.jpg') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .hero a {
+            background: #ec4899;
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .hero a:hover {
+            background: #db2777;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #ec4899;
+            margin-bottom: 40px;
+        }
+
+        /* Projects */
+        .projects {
+            background-color: #1f2937;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #111827;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #9ca3af;
+        }
+
+        /* Services */
+        .services .card {
+            background-color: #111827;
+        }
+
+        /* Client Reviews */
+        .client-reviews {
+            background-color: #f4f4f4;
+            color: black;
+        }
+        .review-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .review-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .review-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .review-card p {
+            margin-top: 10px;
+            color: #333;
+        }
+        .review-card h3 {
+            color: #111;
+        }
+
+        /* Contact Form */
+        .contact {
+            background-color: #1f2937;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact input, 
+        .contact textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background-color: #111827;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            color: white;
+        }
+        .contact button {
+            background: #ec4899;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact button:hover {
+            background: #db2777;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <h1>Pixelwave</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Innovation Through Design</h1>
+            <p>Turning your ideas into stunning digital experiences</p>
+            <a href="#projects">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h3 class="section-title">Our Creations</h3>
+        <div class="grid">
+            <div class="card">
+                <img src="https://logopond.com/logos/28840b8402caa24eab1f780eb64822b9.png" alt="Brand identity design">
+                <h4>Brand Identity</h4>
+                <p>Crafting unique visual identities that communicate brand values.</p>
+            </div>
+            <div class="card">
+                <img src="https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1694103056/catalog/1699814384537559040/lkpsnfs6icootoo7gpir.jpg" alt="UI design example">
+                <h4>UI/UX Design</h4>
+                <p>Designing smooth, intuitive interfaces that delight users.</p>
+            </div>
+            <div class="card">
+                <img src="https://dianapps.com/blog/wp-content/uploads/2024/06/Add-a-heading-39.png" alt="Website layout design">
+                <h4>Web Development</h4>
+                <p>Building responsive, fast-loading websites that deliver results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h3 class="section-title">What We Offer</h3>
+        <div class="grid">
+            <div class="card">
+                <h4>Graphic Design</h4>
+                <p>From logos to marketing materials, we create visuals that leave an impact.</p>
+            </div>
+            <div class="card">
+                <h4>App Design</h4>
+                <p>Crafting mobile-first experiences that keep users engaged.</p>
+            </div>
+            <div class="card">
+                <h4>SEO Optimization</h4>
+                <p>Improving your website’s visibility and reach in search engines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+    <section class="client-reviews">
+        <h2 class="section-title" style="color:#222;">Client Reviews & Works</h2>
+        <div class="review-grid">
+            <div class="review-card">
+                <h3>Aarya</h3>
+                <p>"Pixelwave transformed our ideas into reality with amazing creativity and precision."</p>
+                <img src="https://uicookies.com/wp-content/uploads/2018/12/landing-page-website-template.jpg" alt="Aarya Work">
+                <p style="font-weight: bold;">Work</p>
+            </div>
+            <div class="review-card">
+                <h3>Deep</h3>
+                <p>"Their innovative approach made our brand stand out in a crowded market."</p>
+                <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/adobe-express-ai-landing-page-example.jpg" alt="Deep Work">
+                <p style="font-weight: bold;">Work</p>
+            </div>
+            <div class="review-card">
+                <h3>Preeti</h3>
+                <p>"Working with Pixelwave was smooth, professional, and results-driven."</p>
+                <img src="https://i.pinimg.com/736x/2c/a2/27/2ca22772675f9156ae287c309143bbc7.jpg" alt="Preeti Work">
+                <p style="font-weight: bold;">Work</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <p style="color:#9ca3af; margin-bottom: 20px;">Let’s bring your vision to life.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pixelwave. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
